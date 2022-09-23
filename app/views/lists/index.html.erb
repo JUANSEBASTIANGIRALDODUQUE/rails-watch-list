@@ -4,8 +4,13 @@
   <% @lists.each do |list|%>
   <ul>
     <li><%= link_to "#{list.id}- #{list.name}", list_path(list) %></li>
+    <% if list.photo.attached? %>
+      <%= cl_image_tag list.photo.key %>
+    <% else %>
+      <%= "NO PICTURE" %>
+    <% end %>
   </ul>
   <% end  %>
   <%= link_to "New List", new_list_path, class: "btn btn-primary" %>
 </div>
-<%= render partial: "components/card", locals: { title: "Detrás del último no hay nadie"}%>
+<%= render partial: "components/card", locals: { title: "Detrás del último no hay nadie", body: "ssfnjdguguh"}%>

@@ -1,0 +1,6 @@
+.list-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    var(--list-image);
+  background-size: cover;
+  min-height: 100vh;
+}
